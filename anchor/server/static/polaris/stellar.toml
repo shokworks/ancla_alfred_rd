@@ -1,0 +1,37 @@
+VERSION = "0.1.1"
+
+NETWORK_PASSPHRASE = "Test SDF Network ; September 2015"
+ACCOUNTS = [ "GAMJNRSYBX4C4W7L6S6SWFTOEDAGEGJH6T52Y66KYZZPZE3ROYGWKWG7", "GBISM6A4KLHD62LJPMNFQTYA5VJ4B4BIQTFYC4JWMSJL2LZYH3EAURHR",]
+TRANSFER_SERVER = "http://localhost:8000/sep24"
+TRANSFER_SERVER_SEP0024 = "http://localhost:8000/sep24"
+WEB_AUTH_ENDPOINT = "http://localhost:8000/auth"
+SIGNING_KEY = "GCKTCQKEMFJL26UDPQM4MRIXJLMZT6ECIEJZYGYNMZOZFYGAQLJM5OEP"
+KYC_SERVER = "http://localhost:8000/kyc"
+DIRECT_PAYMENT_SERVER = "http://localhost:8000/sep31"
+
+[DOCUMENTATION]
+ORG_NAME = "Alfred Pay"
+ORG_DBA = "Alfred Payment Solutions"
+ORG_URL = "https://alfredpay.io"
+ORG_LOGO = "https://alfred-pay.com/wp-content/themes/Alfred%20Pay%20Theme/assets/images/Logo_Alfred.svg"
+ORG_DESCRIPTION = "Cross border remittance platform on the stellar blockchain that uses USDC as a medium of exchange."
+ORG_PHYSICAL_ADDRESS = "7440 N Kendall Dr unit 1806 Miami FL 33156"
+ORG_PHONE_NUMBER = "1 (786)-374-4251"
+ORG_TWITTER = "@alfredpayapp"
+ORG_OFFICIAL_EMAIL = "hello@alfred-pay.com"
+
+[[CURRENCIES]]
+code = "DOPC"
+issuer = "GAOJZB2FVDAGPOQK46AYBGSBNA3J3VKMBMEXFG6RQWBAUZLXMATSI4HE"
+status = "test"
+is_asset_anchored = false
+anchor_asset_type = "other"
+desc = "A fake anchored asset that has a multsig distribution account as an example for DOPC."
+
+[[CURRENCIES]]
+code = "TEST"
+issuer = "GDOAW57C3RQ65NKROAG7MFYZ2MM4EQ4HWNQ5BUGFLONIAU2X337XFDRI"
+status = "test"
+is_asset_anchored = false
+anchor_asset_type = "fiat"
+desc = "Cross border remittance anchor that uses USDC as a medium of exchange."
