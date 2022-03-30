@@ -6,7 +6,7 @@ ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
 # Install system dependencies
-RUN apt-get update && apt-get install -y build-essential libssl-dev libffi-dev python3-dev cargo postgresql postgresql-client gettext curl libmariadbclient-dev libmariadbclient-dev-compat
+RUN apt-get update && apt-get install -y build-essential libssl-dev libffi-dev python3-dev cargo postgresql postgresql-client gettext curl libmariadb-dev-compat libmariadb-dev
 
 # Copy files to working directory
 RUN mkdir /code /code/polaris /code/data
