@@ -6,7 +6,7 @@ ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
 # Install system dependencies
-RUN apt-get update && apt-get install -y build-essential libssl-dev libffi-dev python3-dev cargo postgresql postgresql-client gettext curl
+RUN apt-get update && apt-get install -y build-essential libssl-dev libffi-dev python3-dev cargo postgresql postgresql-client gettext curl libmariadbclient-dev libmariadbclient-dev-compat
 
 # Copy files to working directory
 RUN mkdir /code /code/polaris /code/data
@@ -51,7 +51,7 @@ SEP10_CLIENT_ATTRIBUTION_ALLOWLIST=testanchor.stellar.org,horizon-testnet.stella
 
 # Install dependencies
 WORKDIR /code
-RUN pip install pipenv; pipenv install --dev --system
+RUN pip install mysqlclient pipenv; pipenv install --dev --system
 
 # collect static assets
 RUN python manage.py collectstatic --no-input --ignore=*.scss
