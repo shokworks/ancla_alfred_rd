@@ -87,9 +87,17 @@ FORM_RENDERER = "django.forms.renderers.TemplatesSetting"
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 DATABASES = {
-    "default": env.db(
-        "DATABASE_URL", default="sqlite:////" + os.path.join(BASE_DIR, "db.sqlite3")
-    )
+#    "default": env.db(
+#        "DATABASE_URL", default="sqlite:////" + os.path.join(BASE_DIR, "db.sqlite3")
+#    )
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'ancla_rp',
+        'USER': 'ancla_rp',
+        'PASSWORD': 'Ancl2_RP123*',
+        'HOST': '172.31.14.41',
+        'PORT': '3306',
+    }
 }
 
 # Static files (CSS, JavaScript, Images)
